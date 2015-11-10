@@ -1,4 +1,6 @@
-== README
+== CSV games and groupifying
+
+ A repo showing to import a cvs file into a Rails App and also managing groups using groupify gem 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
