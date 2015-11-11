@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get 'products/index'
 
   get 'products/import'
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
   resources :products do
     collection { post :import }
   end
-  
+
   root 'products#index'
 
 
