@@ -10,8 +10,8 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-  section "Recent Products" do
-    table_for Product.order("created_at desc").limit(5) do
+  section "Products selling less than 90" do
+    table_for Product.order("price > 90").limit(5) do
       column :name do |product|
         link_to product.name, [:admin, product]
       end
