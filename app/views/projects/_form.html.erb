@@ -19,8 +19,7 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
-
-  <div>
+  <div class="field">
     <h3>Tasks</h3>
     <%= f.fields_for :tasks do |task| %>
     <%= render 'task_fields', f: task %>

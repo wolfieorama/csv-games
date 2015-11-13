@@ -42,9 +42,9 @@ class ProjectsController < InheritedResources::Base
   end
 
   def destroy
-    @project = Project.find(params[:id])
+    @project = Project.destroy(project_params)
     respond_to do |format|
-      format.html { redirect_to project_url, notice: 'Project was successfully destroyed.'}
+      format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.'}
       format.json { head :no_content }
     end
   end
