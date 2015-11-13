@@ -33,6 +33,9 @@ gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
 
+# to nest our forms lets go cocoon
+gem 'cocoon'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
