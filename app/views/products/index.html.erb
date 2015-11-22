@@ -28,4 +28,5 @@
 </div>
 <div>
   <h3><%= link_to 'download as csv', products_path(:format => "csv") %> </h3>
+  <%= pie_chart Product.group(:quantity).count %>
 </div>

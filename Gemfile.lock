@@ -20,6 +20,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_median (0.1.2)
+      activerecord
     activeadmin (1.0.0.pre2)
       arbre (~> 1.0, >= 1.0.2)
       bourbon
@@ -61,6 +63,7 @@ GEM
     builder (3.2.2)
     byebug (8.0.1)
     cancan (1.6.10)
+    chartkick (1.4.1)
     cocoon (1.2.6)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -91,6 +94,8 @@ GEM
     formtastic_i18n (0.4.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    groupdate (2.5.0)
+      activesupport (>= 3)
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -206,14 +211,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_median
   activeadmin (~> 1.0.0.pre2)
   byebug
   cancan
+  chartkick
   cocoon
   coffee-rails (~> 4.1.0)
   devise
   draper
   figaro
+  groupdate
   jbuilder (~> 2.0)
   jquery-rails
   pg

@@ -27,6 +27,15 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'activeadmin', '~> 1.0.0.pre2'
+
+gem "chartkick"
+
+gem 'groupdate'
+
+gem 'active_median'
+
+
+
 # Plus integrations with:
 gem 'devise'
 gem 'cancan' # or cancancan
