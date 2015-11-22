@@ -2,6 +2,16 @@ class Product < ActiveRecord::Base
 
   require 'csv'
 
+  def self.to_csv
+    attributes = %w{id name price quantity}
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |product|
+        csv << attributes.map{ |attr| product.send(attr)}
+      end
+    end
+  end
+
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
 
