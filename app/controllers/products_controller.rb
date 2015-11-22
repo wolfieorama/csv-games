@@ -8,6 +8,23 @@ class ProductsController < ApplicationController
     end
   end
 
+  def new
+    @product = Product.new(product_params)
+  end
+
+  def create
+    @product = Product.new(product_params)
+    
+    respond_to do |format|
+      if @product.save
+        format.html { redirect_to @product, notice: 'product was successfully created.' }
+        format.json { render :show, status: :created, location: @product }
+      else
+        format.html { render :new }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
+  end
+
   def import
     begin
       Product.import(params[:file])
@@ -15,5 +32,11 @@ class ProductsController < ApplicationController
     rescue
       redirect_to root_url, notice: "Invalid CSV file format."
     end
+  end
+
+  private
+
+  def product_params
+    params.require(:products).permit(:title, :price, :quantity)
   end
 end

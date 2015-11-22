@@ -49,25 +49,6 @@ ActiveRecord::Schema.define(version: 20151113055921) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "group_memberships", force: :cascade do |t|
-    t.integer  "member_id"
-    t.string   "member_type"
-    t.integer  "group_id"
-    t.string   "group_type"
-    t.string   "group_name"
-    t.string   "membership_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "group_memberships", ["group_name"], name: "index_group_memberships_on_group_name", using: :btree
-  add_index "group_memberships", ["group_type", "group_id"], name: "index_group_memberships_on_group_type_and_group_id", using: :btree
-  add_index "group_memberships", ["member_type", "member_id"], name: "index_group_memberships_on_member_type_and_member_id", using: :btree
-
-  create_table "groups", force: :cascade do |t|
-    t.string "type"
-  end
-
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.integer  "quantity"
