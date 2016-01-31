@@ -1,41 +1,14 @@
 == CSV games and groupifying
 
- A repo showing to 
+ A repo showing how to 
  
  ==  import a cvs file into a Rails App 
       and also managing groups using groupify gem 
  
- == Also now include Active Admin for data management and reportingish
+ == Also now included Active Admin for data management and reportingish
  
  == Mailers added as well.
  
  == Throwing in some nested forms Cocoon gem !!
  
- Watch out for me stuff
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ Watch out for more stuff
